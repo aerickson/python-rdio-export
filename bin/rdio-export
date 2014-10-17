@@ -48,6 +48,10 @@ def main():
     global quiet
     quiet = args.quiet
 
+    # initialize rdio key and secret
+    rdio_consumer_key = None
+    rdio_consumer_secret = None
+
     # Load authentication from global config
     config = ConfigParser()
     config.read(os.path.join(os.path.expanduser('~'), '.rdioconfig'))
